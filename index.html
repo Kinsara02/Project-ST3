@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+      
+
+       body{
+        margin:0;
+        font-family: sans-serif;
+        background-color: black;
+       }
+
+       #head{
+        top:0;
+        position: fixed;
+        margin-left: 50vh;
+        color:white
+       }
+
+       #enter{
+        margin-top:7%;
+        margin-left: 2%;
+       }
+
+       input{
+        width:18%;
+        border:none;
+        border-bottom: 2px solid white;
+        background-color: black;
+        color:white
+       }
+
+       input:focus{
+        outline: none;
+       }
+
+
+       input::placeholder{
+        
+        font-weight: bold;
+        color:rgba(241, 223, 223, 0.811);
+        font-size: 14px;
+       }
+
+       #container{
+
+        height: 80vh;
+        width:200%;
+        margin-top: 2%;
+        display:flex;
+        align-items: center;
+        margin-bottom: 1%
+       }
+
+       .inner{
+        height: 40%;
+        width: 30%;
+       }
+       
+
+       #sun{
+        height: 100%;
+        background-image: url("s1.png");
+        background-size: 550px;
+        width: 35%;
+        background-position-x: -300px;
+        background-position-y: -50px;
+        background-repeat: no-repeat;
+        text-align:center;
+       }
+
+       #mec{
+        background-image: url("mercury.jpg");
+        background-size: 90px;
+        height:30%;
+        width: 20%;
+        background-position: center;
+        margin-left: 1%;
+        background-repeat: no-repeat;
+     
+       }
+
+       #ven{
+        background-image: url("venus.jpg");
+        background-size: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+
+       #ear{
+        background-image: url("earth.jpg");
+        background-size: 180px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+
+       #mars{
+        background-image: url("mars.jpg");
+        background-size: 90px;
+        height:25%;
+        width: 15%;
+        background-position: center;
+        background-repeat: no-repeat;
+       }
+
+       #jup{
+        background-image: url("jupiter.jpg");
+        background-size: 600px;
+        height: 70%;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+
+       #sat{
+        background-image: url("saturn.jpg");
+        height: 60%;
+        width: 50%;
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+
+       #urn{
+        background-image: url("uranus.jpg");
+        height: 40%;
+        width: 30%;
+        background-size: 250px;
+        background-position:center;
+        background-repeat: no-repeat;
+       }
+
+       #nep{
+        background-image: url("neptune.jpg");
+        height: 40%;
+        width: 30%;
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+       }
+
+       #plu{
+        background-image: url("pluto.jpg");
+        height: 20%;
+        width: 15%;
+        background-size: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+       }
+
+       #sun:hover{
+        background-size: 600px;
+        background-position-y: -50px ;
+       }
+
+       #sun:hover #t1{
+        display:block;
+       }
+
+       #mec:hover{
+        background-size: 120px;
+       }
+
+       #mec:hover #t2{
+        display:block;
+       }
+
+       #ven:hover{
+        background-size: 250px;
+       }
+
+       #ven:hover #t3{
+        display:block;
+       }
+
+       #ear:hover{
+        background-size: 220px;
+       }
+
+       #ear:hover #t4{
+        display:block;
+       }
+
+       #mars:hover{
+        background-size: 120px;
+       }
+       
+       #mars:hover #t5{
+        display:block;
+       }
+
+       #jup:hover{
+        background-size: 700px;
+       }
+
+       #jup:hover #t6{
+        display:block;
+       }
+
+       #sat:hover{
+        background-size: 350px;
+       }
+
+       #sat:hover #t7{
+        display:block;
+       }
+
+       #urn:hover{
+        background-size: 300px;
+       }
+
+       #urn:hover #t8{
+        display:block;
+       }
+
+       #nep:hover{
+        background-size: 200px;
+       }
+
+       #nep:hover #t9{
+        display:block;
+       }
+
+       #plu:hover{
+        background-size: 150px;
+       }
+
+       #plu:hover #t10{
+        display:block;
+       }
+
+       #t1{
+        height: 5%;
+        width:40%;
+        opacity:80%;
+        margin-top: 80%;
+        color:white;
+        display: none;
+        margin-left: 10%;
+        padding-top: 3%;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t2{
+        height: 10%;
+        width:45%;
+        opacity:80%;
+        margin-top: 40%;
+        color:white;
+        margin-left: 27%;
+        padding-top: 2%;
+        font-size:14px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t3{
+        height: 10%;
+        width:45%;
+        opacity:80%;
+        margin-top: 35%;
+        color:white;
+        margin-left: 27%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:14px;
+        display:none;
+        font-weight: bold; 
+        text-shadow: 2px 2px black;
+       }
+
+       #t4{
+        height: 12%;
+        width:45%;
+        opacity:80%;
+        margin-top: 35%;
+        color:white;
+        margin-left: 27%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:16px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t5{
+        height: 15%;
+        width:45%;
+        opacity:80%;
+        margin-top: 40%;
+        color:white;
+        margin-left: 27%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:14px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+
+       }
+
+       #t6{
+        height: 10%;
+        width:40%;
+        opacity:80%;
+        margin-top: 35%;
+        color:white;
+        margin-left: 35%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:18px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t7{
+        height: 10%;
+        width:27%;
+        opacity:80%;
+        margin-top: 30%;
+        color:white;
+        margin-left: 35%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:18px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t8{
+        height: 10%;
+        width:40%;
+        opacity:80%;
+        margin-top: 35%;
+        color:white;
+        margin-left: 30%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:15px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t9{
+        height: 10%;
+        width:45%;
+        opacity:80%;
+        margin-top: 35%;
+        color:white;
+        margin-left: 27%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:16px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #t10{
+        height: 18%;
+        width:45%;
+        opacity:80%;
+        margin-top: 32%;
+        color:white;
+        margin-left: 27%;
+        padding-top: 3%;
+        text-align: center;
+        font-size:14px;
+        display:none;
+        font-weight: bold;
+        text-shadow: 2px 2px black;
+       }
+
+       #p1{
+        color:white;
+        padding-left: 1%;
+        padding-bottom: 2%;
+       }
+
+       a{
+        text-decoration: none;
+        color: white;
+       }
+
+       
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="head">
+    <h1>
+        Calculate weight of an Object on Different Planets
+    </h1>
+    </div>  
+
+    <div id="enter">
+        <input type="text" id="in" placeholder="Enter Weight" />
+    </div>
+
+    <div id="container">
+
+        <div class="inner" id="sun" onclick="c1()"> <div id="t1"><a href="#p1">SUN </a></div></div>
+        <div class="inner" id="mec" onclick="c2()"> <div id="t2"><a href="#p1">MERCURY</a> </div></div>
+        <div class="inner" id="ven" onclick="c3()">  <div id="t3"><a href="#p1">VENUS </a></div></div>
+        <div class="inner" id="ear" onclick="c4()">  <div id="t4"><a href="#p1">EARTH </a></div></div>
+        <div class="inner" id="mars" onclick="c5()">  <div id="t5"><a href="#p1">MARS </a></div></div>
+        <div class="inner" id="jup" onclick="c6()">  <div id="t6"><a href="#p1">JUPITOR</a></div></div>
+        <div class="inner" id="sat" onclick="c7()">  <div id="t7"><a href="#p1">SATURN</a></div></div>
+        <div class="inner" id="urn" onclick="c8()">  <div id="t8"><a href="#p1">URANUS </a></div></div>
+        <div class="inner" id="nep" onclick="c9()">  <div id="t9"><a href="#p1">NEPTUNE </a></div></div>
+        <div class="inner" id="plu" onclick="c10()">  <div id="t10"><a href="#p1">PLUTO </a></div></div>
+        
+    </div>
+
+ <div id="p1"></div>
+
+
+</body>
+
+    <script>
+
+
+      function c1(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Sun:"+ 27.01*val+"kg";
+      }
+
+      function c2(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Mercury:"+0.38*val+"kg";
+      }
+
+      function c3(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Venus:"+0.91*val+"kg";
+      }
+
+      function c4(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Earth:"+val+"kg";
+      }
+
+      function c5(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Mars:"+0.38*val+"kg";
+      }
+
+      function c6(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Jupitor:"+2.34*val+"kg";
+      }
+
+      function c7(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Saturn:"+1.06*val+"kg";
+      }
+
+      function c8(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Uranus:"+0.92*val+"kg";
+      }
+
+      function c9(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Neptune:"+1.19*val+"kg";
+      }
+
+      function c10(){
+        let val= document.getElementById("in").value;
+        Number(val);
+        document.getElementById("p1").innerHTML="Your weight on Pluto:"+0.06*val+"kg";
+      }
+
+    </script>
+
+</html>
